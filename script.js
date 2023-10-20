@@ -61,23 +61,27 @@ function singleRound(computerChoice, playerChoice) {
         playerScore += 1;
     }
 
+    player.textContent = playerScore;
+    computer.textContent = computerScore;
+    rounds.textContent = numOfRounds;
+
 }
 
-function game() {
-
-    while (computerScore != 5 && playerScore != 5) {
-        let choice = playerChoice();
-        singleRound(getComputerChoice(), choice);
-    }
-
-    console.log('GAME IS OVER!')
+// Declare the final winner, and reset scores
+function winner(){
     if (playerScore > computerScore) {
-        console.log('YOU\'VE WIN!');
+    result.textContent = 'YOU\'VE WON'
+    // console.log('YOU\'VE WIN!');
     }
 
     else {
-        console.log('YOU\'VE LOST')
+    result.textContent = 'YOU\'VE LOST'
+    // console.log('YOU\'VE LOST')
     }
+
+playerScore = 0;
+computerScore = 0;
+numOfRounds = 0;
 }
 
 game();
