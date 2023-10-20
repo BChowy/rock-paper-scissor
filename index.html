@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    
+    <section id="heading">
+        <h1>ROCK PAPER SCISSOR</h1>
+        <p>Round: <span id="round"></span></p>
+        <div>
+            <p id="result">Choose your weapon</p>
+        </div>
+    </section>
+
+    <section id="game">
+        <div id="choices">
+            <p id="playerChoice"></p>
+            <p id="computerChoice"></p>
+        </div>
+
+        <div id="scores">
+            <p>Player: <span id="playerScore"></span></p>
+            <p>Computer: <span id="computerScore"></span></p>
+        </div>
+
+        <div id="options">
+            <button>ROCK</button>
+            <button>PAPER</button>
+            <button>SCISSOR</button>
+        </div>
+    </section>
+
+    <button id="reset">Play Again</button>
+
 </body>
+
 </html>
