@@ -8,6 +8,9 @@ const options = document.querySelector('#options');
 const buttons = options.querySelectorAll('button');
 const result = document.querySelector('#result');
 
+const resetBtn = document.querySelector('reset');
+resetBtn.style.display = 'none';
+
 let player = document.querySelector('#playerScore');
 let computer = document.querySelector('#computerScore');
 
@@ -25,19 +28,8 @@ buttons.forEach((button) => {
 });
 
 // Return a random computer choice
-
-const rounds = document.querySelector('#round');
-const gameSect = document.querySelector('#game');
-const options = document.querySelector('#options');
-const buttons = options.querySelectorAll('button');
-const result = document.querySelector('#result');
-
-let player = document.querySelector('#playerScore');
-let computer = document.querySelector('#computerScore');
-
-
 function getComputerChoice() {
-    let choiceList = ['rock', 'paper', 'scissor'];
+    const choiceList = ['ROCK', 'PAPER', 'SCISSOR'];
     let randomChoice = choiceList[Math.floor(Math.random() * choiceList.length)];
 
     return randomChoice;
@@ -48,15 +40,18 @@ function singleRound(computerChoice, playerChoice) {
     numOfRounds += 1;
     if (computerChoice === playerChoice) {
         result.textContent = 'It\'s a draw!';
+        //console.log("It's a draw!");
     }
 
     else if (computerChoice === 'ROCK' && playerChoice === "SCISSOR" || computerChoice === 'PAPER' && playerChoice === "ROCK" || computerChoice === 'SCISSOR' && playerChoice === "PAPER") {
+        //console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
         result.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
         computerScore += 1;
 
     }
 
     else if (playerChoice === 'ROCK' && computerChoice === "SCISSOR" || playerChoice === 'PAPER' && computerChoice === "ROCK" || playerChoice === 'SCISSOR' && computerChoice === "PAPER") {
+        //console.log(`You win! ${playerChoice} beats ${computerChoice}`);
         result.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
         playerScore += 1;
     }
@@ -69,19 +64,21 @@ function singleRound(computerChoice, playerChoice) {
 
 // Declare the final winner, and reset scores
 function winner(){
-    if (playerScore > computerScore) {
+if (playerScore > computerScore) {
     result.textContent = 'YOU\'VE WON'
     // console.log('YOU\'VE WIN!');
-    }
+}
 
-    else {
+else {
     result.textContent = 'YOU\'VE LOST'
     // console.log('YOU\'VE LOST')
-    }
+}
 
 playerScore = 0;
 computerScore = 0;
 numOfRounds = 0;
 }
 
-game();
+function reset(){
+
+}
