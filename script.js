@@ -12,6 +12,30 @@ let player = document.querySelector('#playerScore');
 let computer = document.querySelector('#computerScore');
 
 
+// Add eventListener to each button, start a round till five wins, then call winner()
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const playerChoice = button.innerText;
+
+        singleRound(getComputerChoice(), playerChoice);
+
+        if(playerScore == 5 || computerScore == 5)
+        winner();
+    });
+});
+
+// Return a random computer choice
+
+const rounds = document.querySelector('#round');
+const gameSect = document.querySelector('#game');
+const options = document.querySelector('#options');
+const buttons = options.querySelectorAll('button');
+const result = document.querySelector('#result');
+
+let player = document.querySelector('#playerScore');
+let computer = document.querySelector('#computerScore');
+
+
 function getComputerChoice() {
     let choiceList = ['rock', 'paper', 'scissor'];
     let randomChoice = choiceList[Math.floor(Math.random() * choiceList.length)];
