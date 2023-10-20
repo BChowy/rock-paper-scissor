@@ -1,5 +1,17 @@
 let computerScore = 0;
 let playerScore = 0;
+let numOfRounds = 0;
+
+const rounds = document.querySelector('#round');
+const gameSect = document.querySelector('#game');
+const options = document.querySelector('#options');
+const buttons = options.querySelectorAll('button');
+const result = document.querySelector('#result');
+
+let player = document.querySelector('#playerScore');
+let computer = document.querySelector('#computerScore');
+
+
 function getComputerChoice() {
     let choiceList = ['rock', 'paper', 'scissor'];
     let randomChoice = choiceList[Math.floor(Math.random() * choiceList.length)];
