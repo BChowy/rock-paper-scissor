@@ -43,27 +43,21 @@ function getComputerChoice() {
     return randomChoice;
 }
 
-function playerChoice() {
-    let input = prompt("What's your choice?");
-    let choice = input.toLowerCase();
-
-    return choice;
-}
-
+// Show the result of one round, change the scores, and display the new score 
 function singleRound(computerChoice, playerChoice) {
-
+    numOfRounds += 1;
     if (computerChoice === playerChoice) {
-        console.log("It's a draw!");
+        result.textContent = 'It\'s a draw!';
     }
 
-    else if (computerChoice === 'rock' && playerChoice === "scissor" || computerChoice === 'paper' && playerChoice === "rock" || computerChoice === 'scissor' && playerChoice === "paper") {
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+    else if (computerChoice === 'ROCK' && playerChoice === "SCISSOR" || computerChoice === 'PAPER' && playerChoice === "ROCK" || computerChoice === 'SCISSOR' && playerChoice === "PAPER") {
+        result.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
         computerScore += 1;
 
     }
 
-    else if (playerChoice === 'rock' && computerChoice === "scissor" || playerChoice === 'paper' && computerChoice === "rock" || playerChoice === 'scissor' && computerChoice === "paper") {
-        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+    else if (playerChoice === 'ROCK' && computerChoice === "SCISSOR" || playerChoice === 'PAPER' && computerChoice === "ROCK" || playerChoice === 'SCISSOR' && computerChoice === "PAPER") {
+        result.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
         playerScore += 1;
     }
 
