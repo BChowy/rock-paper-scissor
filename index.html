@@ -4,40 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ROCK PAPER SCISSOR</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <section id="heading">
-        <h1>ROCK PAPER SCISSOR</h1>
-        <p>Round: <span id="round"></span></p>
-        <div>
-            <p id="result">Choose your weapon</p>
-        </div>
-    </section>
+    <div id="game">
+        <section>
+            <div id="title">
+                <span>ROCK</span>
+                <span>PAPER</span>
+                <span>SCISSOR</span>
+            </div>
+            <div>
+                <p>Round: <span id="round"></span></p>
 
-    <section id="game">
-        <div id="choices">
-            <p id="playerChoice"></p>
-            <p id="computerChoice"></p>
-        </div>
+                <p id="result">Choose your weapon</p>
+            </div>
+        </section>
 
-        <div id="scores">
-            <p>Player: <span id="playerScore"></span></p>
-            <p>Computer: <span id="computerScore"></span></p>
-        </div>
+        <section>
+            <div id="choices">
+                <p id="playerChoice">playerChoice</p>
+                <p id="computerChoice">computerChoice</p>
+            </div>
 
-        <div id="options">
-            <button>ROCK</button>
-            <button>PAPER</button>
-            <button>SCISSOR</button>
-        </div>
-    </section>
+            <div id="scores">
+                <p>Player: <span id="playerScore"></span></p>
+                <p>Computer: <span id="computerScore"></span></p>
+            </div>
 
-    <button id="reset">Play Again</button>
+            <div id="options">
+                <button>ROCK</button>
+                <button>PAPER</button>
+                <button>SCISSOR</button>
+            </div>
+        </section>
 
+        <button id="reset">Play Again</button>
+    </div>
 </body>
 
 </html>
