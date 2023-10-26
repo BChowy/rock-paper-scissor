@@ -4,46 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCK PAPER SCISSOR</title>
+    <title>THE WIZARDS' WAR</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div id="game">
-        <section>
-            <div id="title">
-                <span>ROCK</span>
-                <span>PAPER</span>
-                <span>SCISSOR</span>
-            </div>
-            <div>
-                <p>Round: <span id="round"></span></p>
+    <!-- <div id="game"> -->
+    <header>
 
-                <p id="result">Choose your weapon</p>
-            </div>
-        </section>
+        <p id="title">THE WIZARDS' FIGHT</p>
+        <p>Who will win this fierce fight?</p>
 
-        <section>
-            <div id="choices">
-                <p id="playerChoice">playerChoice</p>
-                <p id="computerChoice">computerChoice</p>
-            </div>
+    </header>
 
-            <div id="scores">
-                <p>Player: <span id="playerScore"></span></p>
-                <p>Computer: <span id="computerScore"></span></p>
-            </div>
+    <section id="top">
+        <div id="instructions">
+            <p><span>Stone Wall</span> beats <span>Wind</span></p>
+            <p> | </p>
+            <p><span>Wind</span> beats <span>Fireball</span></p>
+            <p> | </p>
+            <p><span>Fireball</span> beats <span>Stone Wall</span></p>
+        </div>
 
-            <div id="options">
-                <button>ROCK</button>
-                <button>PAPER</button>
-                <button>SCISSOR</button>
-            </div>
-        </section>
+    </section>
 
-        <button id="reset">Play Again</button>
+    <section id="scores">
+        <p>Number of successful attacks: <span id="playerScore"></span></p>
+        <p>Number of loses: <span id="computerScore"></span></p>
+    </section>
+
+    <p id="result">Choose a spell to cast</p>
+
+    <section id="choices">
+        <p id="computerChoice">opponent spell</p>
+        <div id="playerChoice">
+            <button>STONE</button>
+            <button>FIREBALL</button>
+            <button>WIND</button>
+        </div>
+
+        
+        </div>
+    </section>
+
+    </section>
+
+    <div>
+        <button id="reset" class="hide-element">Play Again?</button>
     </div>
+    <!-- </div> -->
 </body>
 
 </html>
