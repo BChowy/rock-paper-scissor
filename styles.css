@@ -1,0 +1,86 @@
+body {
+  max-width: 750px;
+  height: auto;
+  margin: auto;
+  background: rgb(8, 8, 8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-size: small; */
+  font-family: "Midnight Minutes";
+}
+header {
+  text-align: center;
+  font-size: 30px;
+}
+
+#title {
+  font-size: 60px;
+  margin: 30px 0px;
+}
+
+#top p {
+  text-align: center;
+}
+
+#instructions {
+  font-size: larger;
+  text-align: center;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+#instructions span {
+  margin: 0 5px;
+  flex-shrink: 1;
+}
+
+#scores {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#result {
+  text-align: center;
+  font-size: larger;
+  margin: 20px 0px 0px;
+  padding: 10px;
+}
+
+#playerChoice {
+  display: flex;
+  justify-content: space-between;
+}
+
+#playerChoice button {
+  /* border-style: dashed;
+  border-width: 3px;
+  border-color: red; */
+  width: 100px;
+  padding: 5px 15px;
+  margin: 12px 12px;
+}
+
+#computerChoice {
+  text-align: center;
+  border-style: dashed;
+  border-width: 1.5px;
+  border-color: white;
+  padding: 10px 15px;
+}
+
+#reset {
+  margin: 30px;
+  border-style: dashed;
+  border-width: 1.5px;
+  border-color: white;
+  padding: 10px 15px;
+}
+
+.hide-element {
+  display: none;
+}
