@@ -70,11 +70,17 @@ header,
   justify-content: space-between;
 }
 
+#playerScore,
+#computerScore,
+#playerChoice button,
+#reset {
+  font-size: 25px;
+}
+
 #playerChoice button,
 #reset {
   padding: 5px 15px;
   margin: 12px 12px;
-  font-size: 20px;
 }
 
 #computerChoice {
