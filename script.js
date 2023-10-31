@@ -1,5 +1,5 @@
-let computerScore = 0;
-let playerScore = 0;
+let computerScore = 5;
+let playerScore = 5;
 
 const gameSect = document.querySelector('#game');
 const options = document.querySelector('#playerChoice');
@@ -21,14 +21,14 @@ buttons.forEach((button) => {
 
         singleRound(getComputerChoice(), playerChoice);
 
-        if (playerScore == 5 || computerScore == 5)
+        if (playerScore == 0 || computerScore == 0)
             winner();
     });
 });
 
 resetBtn.addEventListener('click', () => {
-    playerScore = 0;
-    computerScore = 0;
+    playerScore = 5;
+    computerScore = 5;
     result.textContent = 'Choose a spell to cast';
     CPUChoice.textContent = 'opponent spell';
 
@@ -54,12 +54,12 @@ function singleRound(computerChoice, playerChoice) {
 
     else if (computerChoice === 'STONE' && playerChoice === "WIND" || computerChoice === 'FIREBALL' && playerChoice === "STONE" || computerChoice === 'WIND' && playerChoice === "FIREBALL") {
         result.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
-        computerScore += 1;
+        computerScore -= 1;
     }
 
     else if (playerChoice === 'STONE' && computerChoice === "WIND" || playerChoice === 'FIREBALL' && computerChoice === "STONE" || playerChoice === 'WIND' && computerChoice === "FIREBALL") {
         result.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
-        playerScore += 1;
+        playerScore -= 1;
     }
 
     player.textContent = playerScore;
@@ -72,7 +72,7 @@ function winner() {
     choices.classList.toggle('hide-element');
     resetBtn.classList.toggle('hide-element');
 
-    if (playerScore > computerScore) {
+    if (computerScore == 0) {
         result.textContent = 'YOU\'VE WON. Now what?'
         // console.log('YOU\'VE WIN!');
     }
