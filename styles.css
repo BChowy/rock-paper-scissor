@@ -70,13 +70,11 @@ header,
   justify-content: space-between;
 }
 
-#playerChoice button {
-  /* border-style: dashed;
-  border-width: 3px;
-  border-color: red; */
-  width: 100px;
+#playerChoice button,
+#reset {
   padding: 5px 15px;
   margin: 12px 12px;
+  font-size: 20px;
 }
 
 #computerChoice {
