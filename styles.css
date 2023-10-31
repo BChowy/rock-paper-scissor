@@ -85,14 +85,6 @@ header,
   padding: 10px 15px;
 }
 
-#reset {
-  margin: 30px;
-  border-style: dashed;
-  border-width: 1.5px;
-  border-color: white;
-  padding: 10px 15px;
-}
-
 .hide-element {
   display: none;
 }
