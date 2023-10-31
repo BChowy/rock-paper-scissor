@@ -56,6 +56,15 @@ header {
   padding: 10px;
 }
 
+header,
+#result,
+#playerChoice button,
+#reset,
+#playerScore,
+#computerScore {
+  font-family: "KNIGHT WARRIOR";
+}
+
 #playerChoice {
   display: flex;
   justify-content: space-between;
