@@ -17,6 +17,7 @@ I've completed the basic functionality of the game, including showing different 
 - Learned how to get a random element from an array. 
 
 ## Preview
+#### You can view the project at [this link](https://github.com/BChowy/rock-paper-scissor).
 Starting the game
 :-------------------------:
 ![Frame 6](https://github.com/BChowy/rock-paper-scissor/assets/75831792/ac10501c-3e2f-4a65-99ca-e55ec1604283) 
