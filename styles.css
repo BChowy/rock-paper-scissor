@@ -81,6 +81,7 @@ header,
 #reset {
   padding: 5px 15px;
   margin: 12px 12px;
+  background-color: white;
 }
 
 #computerChoice {
